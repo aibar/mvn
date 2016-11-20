@@ -1,16 +1,18 @@
 ## Minimal Maven Docker Image
 
-    FROM walkingdevs/mvn:3.3.9
+    FROM walkingdevs/mvn
 
 ### Usage
     docker run --rm -it \
            -v $PWD:/src \
+           -w /src
            walkingdevs/mvn \
-           clean package
+           package
 
 ### If you have something special in ".m2"
     docker run --rm -it \
            -v $PWD:/src \
            -v $HOME/.m2:/m2 \
+           -w /src
            walkingdevs/mvn \
-           clean package
+           package
