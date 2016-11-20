@@ -7,7 +7,7 @@
            -v $PWD:/src \
            -w /src
            walkingdevs/mvn \
-           package
+           mvn package
 
 ### If you have something special in ".m2"
     docker run --rm -it \
@@ -15,4 +15,4 @@
            -v $HOME/.m2:/m2 \
            -w /src
            walkingdevs/mvn \
-           package
+           mvn package
