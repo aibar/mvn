@@ -9,5 +9,3 @@ RUN wget http://www-eu.apache.org/dist/maven/maven-3/$Version/binaries/apache-ma
     rm maven.tar.gz && \
     ln -s /maven/bin/mvn /bin/mvn && \
     ln -s /root/.m2 /m2
-
-ENTRYPOINT ["mvn"]
